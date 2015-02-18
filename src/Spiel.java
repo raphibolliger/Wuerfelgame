@@ -22,7 +22,7 @@ public class Spiel {
             int sp2 = spieler2.wuerflen();
 
             if (sp1 > sp2) win1++;
-            else win2++;
+            if (sp1 < sp2) win2++;
 
         }
 
@@ -40,7 +40,7 @@ public class Spiel {
         Wuerfel B = new Wuerfel("B",5,2,5,2,2,5);
         Wuerfel C = new Wuerfel("C",1,4,4,4,4,4);
 
-        Spiel spiel = new Spiel(A, B, 20000);
+        Spiel spiel = new Spiel(A, C, 100);
         spiel.spielen();
 
     }
